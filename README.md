@@ -37,10 +37,10 @@ The samples were generated using MATPOWER package [1]. The sampling method is as
 
 ## Results
 ### 1. Learning Stability Boundary
-The trained neural network achieves an testing classification accuracy of 99.9%.
+Based on the feasible and infeasible data points, a neural network with one hidden layer is trained for a binary classifier. The trained neural network achieves an testing classification accuracy of 99.9%.
 
 ### 2. Predicting Stability Margin
-The fitted linear function achieves an R-squared measure of 0.71, indicating reasonably good performance as follows:  
+With the trained binary classifier, the scores computed at the output layer is used to fit a predictor of the voltage stability margin. A scatter plot of score-margin pairs and the fitted function are plotted below. The fitted linear function achieves an R-squared measure of 0.71, indicating reasonably good performance as follows:  
 <img width="576" alt="marginfit" src="https://user-images.githubusercontent.com/67979833/87262637-b0db9b80-c488-11ea-911c-9b6f5bcca91d.png">
 
 ## References
