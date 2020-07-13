@@ -6,7 +6,7 @@ Preventing voltage collapse is critical for the reliable operation of the power 
 
 ## Neural Network Architecture
 
-<img width="576" alt="NN" src="https://user-images.githubusercontent.com/67979833/87262631-ab7e5100-c488-11ea-97a3-c010d1108dc2.png">
+<img width="50%" height="50%" alt="NN" src="https://user-images.githubusercontent.com/67979833/87262631-ab7e5100-c488-11ea-97a3-c010d1108dc2.png">
 
 ## Dataset
 <table align='center'>
