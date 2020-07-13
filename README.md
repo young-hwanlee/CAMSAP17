@@ -6,7 +6,8 @@ Preventing voltage collapse is critical for the reliable operation of the power 
 
 ## Neural Network Architecture
 <img width="576" alt="NN" src="https://user-images.githubusercontent.com/67979833/87262631-ab7e5100-c488-11ea-97a3-c010d1108dc2.png">
-Output layer: Hinge Loss (L = max(-xy + 1, 0) where x is the score computed from the output layer, and y is the binary label {-1,1}
+Output layer: Hinge Loss (L = max(-xy + 1, 0)
+where x is the score computed from the output layer, and y is the binary label {-1,1}
 
 ## Dataset
 <table align='center'>
