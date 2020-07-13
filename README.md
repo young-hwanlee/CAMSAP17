@@ -14,12 +14,12 @@ Output layer: Hinge Loss
 ## Dataset
 <table align='center'>
 <tr align='center'>
-<td> Sampling method </td>
 <td> Power profiles in a nonconvex stability region </td>
+<td> Sampling method </td>
 </tr>
 <tr>
-<td><img width="576" alt="sampling_for_distance" src="https://user-images.githubusercontent.com/67979833/87262622-a3261600-c488-11ea-979d-7f15b1196154.png">
 <td><img width="576" alt="feasible" src="https://user-images.githubusercontent.com/67979833/87262623-a5887000-c488-11ea-9b56-5a2e06d7a154.png">
+<td><img width="576" alt="sampling_for_distance" src="https://user-images.githubusercontent.com/67979833/87262622-a3261600-c488-11ea-979d-7f15b1196154.png">
 </tr>
 </table>
 
@@ -28,8 +28,12 @@ The samples were generated using MATPOWER package [1]. The sampling method is as
 > 1. A random power profile vector 's' was generated, including the real and reactive powers for the loads and the real powers for the generators. (To do this, the power factor for each load bus was uniformly sampled in the interval [0.4,1], so that the average power factor can be 0.7. Then, the reactive power demands were adjusted to yield the sampled power factors. The load buses with real or reactive power demands equl to 0 were ignored.) 
 > 2. Based on the sampled power profile, two boundary points were computed; using the continuation power flow for the feasible boundary points 's(η_c)' and the SDP relaxation-based power flow for the infeasible boundary points 's(η_s)'. 
 
-### 2. Sample Generation for Learning the Distance to Boundary
-> 1. 
+### 2. Sample Generation for Learning the Minimum Distance from an Operating Point to the Stability Boundary
+> 1. A feasible power profile was picked from the data set already generated above. 
+> 2. A profile 's_1' was obtained by shrinking the profile by a random amount (new base profile). 
+> 3. Another feasible power profile 's_2' was similarly obtained (new target profile).  
+> 4. Then, the continuation power flow method was used to obtain a boundary point 's_1 + η(s_2 - s_1)'. 
+> 5. The profile 's_1' and the minimum distance '||η^* (s_2 - s_1)|| were recorded after performing the 3~4 steps N times, where η^* = arg min η.
 
 ## Results
 <img width="576" alt="marginfit" src="https://user-images.githubusercontent.com/67979833/87262637-b0db9b80-c488-11ea-911c-9b6f5bcca91d.png">
