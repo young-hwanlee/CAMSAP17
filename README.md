@@ -40,7 +40,7 @@ The samples were generated using MATPOWER package [1]. The sampling method is as
 The trained neural network achieves an testing classification accuracy of 99.9%.
 
 ### 2. Predicting Stability Margin
-The fitted linear function achieves an R-squared measure of 0.71, indicating reasonably good performance as follows:
+The fitted linear function achieves an R-squared measure of 0.71, indicating reasonably good performance as follows:  
 <img width="576" alt="marginfit" src="https://user-images.githubusercontent.com/67979833/87262637-b0db9b80-c488-11ea-911c-9b6f5bcca91d.png">
 
 ## References
