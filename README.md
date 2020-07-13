@@ -24,9 +24,12 @@ Output layer: Hinge Loss
 </table>
 
 The samples were generated using MATPOWER package [1]. The sampling method is as follows: 
+### 1. Sample Generation for Learning the Stability Boundary
 > 1. A random power profile vector 's' was generated, including the real and reactive powers for the loads and the real powers for the generators. (To do this, the power factor for each load bus was uniformly sampled in the interval [0.4,1], so that the average power factor can be 0.7. Then, the reactive power demands were adjusted to yield the sampled power factors. The load buses with real or reactive power demands equl to 0 were ignored.) 
-> 2. Based on the sampled power profile, two boundary points were computed; using the continuation power flow for the feasible boundary points, s(η_c) and the SDP relaxation-based power flow for the infeasible boundary points. 
-> 3. $\text{S}_1(N) = \sum_{p=1}^N \text{E}(p)$
+> 2. Based on the sampled power profile, two boundary points were computed; using the continuation power flow for the feasible boundary points 's(η_c)' and the SDP relaxation-based power flow for the infeasible boundary points 's(η_s)'. 
+
+### 2. Sample Generation for Learning the Distance to Boundary
+> 1. 
 
 ## Results
 <img width="576" alt="marginfit" src="https://user-images.githubusercontent.com/67979833/87262637-b0db9b80-c488-11ea-911c-9b6f5bcca91d.png">
