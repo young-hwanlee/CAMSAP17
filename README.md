@@ -1,7 +1,7 @@
 # Predicting Voltage Stability Margin via Learning Stability Region Boundary
 Published in: 2017 IEEE 7th International Workshop on Computational Advances in Multi-Sensor Adaptive Processing (CAMSAP). For more information, please refer to the paper.
 
-* Tools: MATLAB (MATPOWER), Python, TensorFlow
+* Tools: MATLAB (MATPOWER), Python (TensorFlow)
 
 ## Abstract
 Preventing voltage collapse is critical for the reliable operation of the power grid. In this paper, the voltage stability margin, which is deﬁned as the distance from a given power proﬁle to the boundary of the stability region, is efﬁciently estimated using a data-driven machine learning approach. The key idea is to train a neural network classiﬁer to learn the boundary of the potentially nonconvex stability region, and exploit the resulting score metric as the regressor for stability margin prediction. No particular loading direction is assumed, but rather the minimum distance to the boundary along all possible directions is captured. The training samples are generated from both continuation and semideﬁnite relaxation power ﬂow methods. The performance and computational advantage of the proposed approach are veriﬁed by numerical experiments.
